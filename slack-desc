@@ -1,11 +1,11 @@
 lzo: lzo (A lossless data compression libraray)
 lzo:
 lzo: LZO is a portable, lossless data compression library which is suitable
-lzo: for data de-/compression in real-time. This means it favours speed over
-lzo: compression ratio. It requires no memory for decompression.
+lzo: for data de-/compression in real-time. This means it favours speed
+lzo: over compression ratio. It requires no memory for decompression.
+lzo:
 lzo:
 lzo:
 lzo:
 lzo:
 lzo: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
-lzo:
