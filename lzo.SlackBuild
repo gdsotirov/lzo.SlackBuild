@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Slackware build script for LZO
-# Copyright (C) 2006,2007,2009,2012 Georgi D. Sotirov <gdsotirov@dir.bg>
+# Copyright (C) 2006-2012 Georgi D. Sotirov <gdsotirov@dir.bg>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: lzo.SlackBuild,v 1.5 2012/10/06 18:14:22 gsotirov Exp $
+# $Id: lzo.SlackBuild,v 1.6 2016/10/24 18:42:33 gsotirov Exp $
 #
 
 . ../../slack-package.conf
@@ -77,10 +77,11 @@ mkdir -p $PKG/install
 install -m 644 $CWD/slack-desc     $PKG/install/slack-desc
 install -m 644 $CWD/slack-required $PKG/install/slack-required
 
-mkdir -p $PKG/usr/src/slackbuilds/$NAME-$VERSION
-install -m 644 $CWD/slack-desc       $PKG/usr/src/slackbuilds/$NAME-$VERSION/slack-desc
-install -m 644 $CWD/slack-required   $PKG/usr/src/slackbuilds/$NAME-$VERSION/slack-required
-install -m 644 $CWD/$NAME.SlackBuild $PKG/usr/src/slackbuilds/$NAME-$VERSION/$NAME.SlackBuild
+SBDIR=$PKG/usr/src/slackbuilds/$NAME-$VERSION
+mkdir -p $SBDIR
+install -m 644 $CWD/slack-desc       $SBDIR/slack-desc
+install -m 644 $CWD/slack-required   $SBDIR/slack-required
+install -m 644 $CWD/$NAME.SlackBuild $SBDIR/$NAME.SlackBuild
 
 # Assemble
 cd $PKG
